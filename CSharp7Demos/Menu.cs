@@ -29,10 +29,12 @@ namespace CSharp7Demos
                 if (!r || entry < 1 || entry > _entries.Count)
                     continue;
 
+                Console.WriteLine("\n*******************************************************");
                 var (Text, Demo) = _entries[entry - 1];
                 try
                 {
                     Demo.Execute();
+                    Console.WriteLine("\n*******************************************************\n");
                 }
                 catch (Exception e)
                 {

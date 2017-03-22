@@ -3,7 +3,7 @@ using System;
 namespace CSharp7Demos
 {
     [Demo("Binary Literals")]
-    class DemoBinaryLiterals : IMenuEntry
+    class BinaryLiteralsDemo : IMenuEntry
     {
         public void Execute()
         {
