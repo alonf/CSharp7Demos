@@ -9,16 +9,18 @@ namespace CSharp7Demos
         {
             public string Name { get; }
 
-            public Person(string name) => Name = name ?? throw new ArgumentNullException(nameof(name));
+            public Person(string name) => Name = name ?? throw new ArgumentNullException(nameof (name));
 
             public string GetFirstName()
             {
                 var parts = Name.Split(' ');
-                return (parts.Length > 1) ? parts[0] : throw new InvalidOperationException("No name!");
+                return (parts.Length > 1) ? parts[0] : 
+                throw new InvalidOperationException("No name!");
             }
 
             public string GetLastName() => throw new NotImplementedException();
         }
+
         public void Execute()
         {
             try
@@ -49,9 +51,6 @@ namespace CSharp7Demos
             {
                 Console.WriteLine(e);
             }
-
-
-
         }
     }
 }
