@@ -29,7 +29,7 @@ namespace CSharp7Demos
             Console.WriteLine($"New Tuple Name:{newTuple.Name}, Age:{newTuple.Age}");
 
             var result = ReturnTuple2();
-            Console.WriteLine($"Name: {result.Name}   Age:{result.Item2}");
+            Console.WriteLine($"Name: {result.Name}   Age:{result.Age}");
 
 
         }
