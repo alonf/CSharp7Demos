@@ -30,7 +30,7 @@ namespace CSharp7Demos
                     continue;
 
                 Console.WriteLine("\n*******************************************************");
-                var (Text, Demo) = _entries[entry - 1];
+                var (Text, Demo) = _entries[entry - 1]; //tuple destruction
                 try
                 {
                     Demo.Execute();
