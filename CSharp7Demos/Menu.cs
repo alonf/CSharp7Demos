@@ -24,8 +24,8 @@ namespace CSharp7Demos
                 Show();
 
                 Console.WriteLine("Select menue entry:");
-                int entry;
-                bool r = int.TryParse(Console.ReadLine(), out entry);
+
+                bool r = int.TryParse(Console.ReadLine(), out int entry); //out variable declaration
                 if (!r || entry < 1 || entry > _entries.Count)
                     continue;
 
