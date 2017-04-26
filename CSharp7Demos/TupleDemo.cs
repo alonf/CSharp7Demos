@@ -18,12 +18,15 @@ namespace CSharp7Demos
 
         public void Execute()
         {
+            // The old way, yuck!
             var oldTuple = new Tuple<int, int>(1,2);
             Console.WriteLine(oldTuple);
             Console.WriteLine($"OldTuple Item1:{oldTuple.Item1}, Item2:{oldTuple.Item2}");
             Console.Write("new Tuple: ");
             Console.WriteLine(ReturnTuple());
             
+
+            // The new way, shiny!
             var newTuple = (Name: "Alon", Age: 47);
             Console.WriteLine(newTuple);
             Console.WriteLine($"New Tuple Name:{newTuple.Name}, Age:{newTuple.Age}");

@@ -8,21 +8,21 @@ namespace CSharp7Demos
         public void Execute()
         {
             var data = DayOfWeek.Monday;
-            Print();
+            Print(data);
             data = DayOfWeek.Thursday;
-            Print();
+            Print(data);
+        }
 
-            void Print()
+        void Print(DayOfWeek data)
+        {
+            if (data is DayOfWeek.Monday)
             {
-                if (data is DayOfWeek.Monday)
-                {
-                    Console.WriteLine("Monday");
-                }
+                Console.WriteLine("Monday");
+            }
 
-                if (data is DayOfWeek.Thursday)
-                {
-                    Console.WriteLine("Thursday");
-                }
+            if (data is DayOfWeek.Thursday)
+            {
+                Console.WriteLine("Thursday");
             }
 
             object o = null;
@@ -32,7 +32,7 @@ namespace CSharp7Demos
             }
             int x = 42;
             if (!(x is int.MaxValue))
-            Console.WriteLine("x is not max integer value");
+                Console.WriteLine("x is not max integer value");
         }
     }
 }

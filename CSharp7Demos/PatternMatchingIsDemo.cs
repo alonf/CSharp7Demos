@@ -7,18 +7,27 @@ namespace CSharp7Demos
     {
         public void Execute()
         {
-            var data = "Alon";
-            Print();
-            data = null;
-            Print();
-
-            void Print()
-            {
-                if (data is string text)
-                {
-                    Console.WriteLine(text);
-                }
-            }
+            Print(new Circle() { Radius = 5 });
         }
+		
+        void Print(Shape shape)
+        {
+            Debugger.Break();
+
+            // The old way
+            var myRect = shape as Rectangle;
+            if (myRect != null && myRect.Height > 2)
+            {
+                Console.WriteLine("Yay!");
+            }
+
+            // The new, shiny, C# 7 way
+            if (shape is Rect r && r.Height > 2)
+            {
+                Console.WriteLine("Yay!");
+            }
+
+        }
+        
     }
 }

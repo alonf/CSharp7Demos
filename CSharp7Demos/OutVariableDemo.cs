@@ -7,15 +7,23 @@ namespace CSharp7Demos
     {
         public void Execute()
         {
+            // The old way
+            int g;
+            int e;
+            string f;
+            ReturnManyValues(out g, out e, out f);
+
+            // The new way
             ReturnManyValues(out int a, out int b, out string s);
             Console.WriteLine($"a:{a}, b:{b}, s:{s}");
+        }
 
-            void ReturnManyValues(out int x, out int y, out string z)
-            {
-                x = 10;
-                y = 20;
-                z = "Hello";
-            }
+
+        void ReturnManyValues(out int x, out int y, out string z)
+        {
+            x = 10;
+            y = 20;
+            z = "Hello";
         }
     }
 }
